@@ -10,7 +10,7 @@ def main() -> None:
         users = f.read().split("\n")
 
     root = Path("git-spoofing")
-    if root.exists:
+    if root.exists():
         shutil.rmtree(root)
     root.mkdir()
 

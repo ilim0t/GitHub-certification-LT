@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  git-spoofing:
+    image: python
+    working_dir: /working_dir
+    command: python spoofing.py
+    volumes:
+      - .:/working_dir
+
+  check-keys:
+    image: python
+    working_dir: /working_dir
+    command: python check_keys.py
+    volumes:
+      - .:/working_dir
